@@ -1,0 +1,42 @@
+{
+  "type": "object",
+  "required": [
+    "error",
+    "requestId"
+  ],
+  "properties": {
+    "error": {
+      "type": "object",
+      "required": [
+        "status",
+        "code",
+        "message",
+        "type"
+      ],
+      "properties": {
+        "status": {
+          "type": "integer",
+          "description": "Código HTTP do erro",
+          "enum": [400]
+        },
+        "code": {
+          "type": "string",
+          "description": "Código do erro"
+        },
+        "message": {
+          "type": "string",
+          "description": "Mensagem de erro"
+        },
+        "type": {
+          "type": "string",
+          "description": "Tipo do Erro",
+          "enum": ["ApiError"]
+        }
+      }
+    },
+    "requestId": {
+      "type": "string",
+      "description": "ID da requisição"
+    }
+  }
+}

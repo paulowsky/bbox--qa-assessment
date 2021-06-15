@@ -1,0 +1,31 @@
+{
+  "valido" : {
+    "fullName": "paulo",
+    "email": "email56755@email.com",
+    "password": "senha123",
+    "loginType": "email"
+  },
+  "email-invalido" : {
+    "fullName": "paulo",
+    "email": "email.com",
+    "password": "senha123",
+    "loginType": "email"
+  },
+  "email-registrado" : {
+    "fullName": "paulo",
+    "email": "email@email.com",
+    "password": "senha123",
+    "loginType": "email"
+  },
+  "fullName-branco" : {
+    "email": "email56534755@email.com",
+    "password": "senha123",
+    "loginType": "etgr"
+  },
+  "loginType-invalido" : {
+    "fullName": "paulo",
+    "email": "email56534755@email.com",
+    "password": "senha123",
+    "loginType": "dasdas"
+  }
+}

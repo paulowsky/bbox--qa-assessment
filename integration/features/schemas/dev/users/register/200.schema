@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "required": [
+    "user",
+    "token"
+  ],
+  "properties": {
+    "user": {
+      "type": "object",
+      "properties": {}
+    },
+    "token": {
+      "type": "string",
+      "description": "Session token (JWT)"
+    }
+  }
+}

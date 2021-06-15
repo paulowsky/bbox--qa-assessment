@@ -1,0 +1,31 @@
+pipeline {​​​​​​​​
+  agent {​​​​​​​​
+    dockerfile true
+  }​​​​​​​​
+  stages {​​​​​​​​
+    stage('Build') {​​​​​​​​
+      steps {​​​​​​​​
+        echo 'Building or Resolve Dependencies!'
+        sh 'rm -rf Gemfile.lock'
+        sh 'bundle install'
+      }​​​​​​​​
+    }​​​​​​​​
+    stage('Test') {​​​​​​​​
+      steps {​​​​​​​​
+        echo 'Running Regression Tests'
+        sh 'rm -rf reports/*'
+        sh "bundle exec cucumber -p parallel -t $tag"
+      }​​​​​​​​
+      post {​​​​​​​​
+        always {​​​​​​​​
+          cucumber failedFeaturesNumber: -1, failedScenariosNumber: -1, failedStepsNumber: -1, fileIncludePattern: '**/*.json', jsonReportDirectory: 'reports', pendingStepsNumber: -1, skippedStepsNumber: -1, sortingMethod: 'NATURAL', undefinedStepsNumber: -1
+        }​​​​​​​​
+      }​​​​​​​​
+    }​​​​​​​​
+    stage('Finish') {​​​​​​​​
+      steps {​​​​​​​​
+        cleanWs()
+      }​​​​​​​​
+    }​​​​​​​​
+  }​​​​​​​​
+}​​​​​​​​

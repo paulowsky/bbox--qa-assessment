@@ -1,0 +1,49 @@
+{
+    "type": "object",
+    "description": "500",
+    "required": [
+        "error",
+        "requestId"
+    ],
+    "properties": {
+        "error": {
+            "type": "object",
+            "description": "error",
+            "required": [
+                "status",
+                "code",
+                "message",
+                "type",
+                "stack"
+            ],
+            "properties": {
+                "status": {
+                    "type": "integer",
+                    "description": "status",
+                    "enum": [500]
+                },
+                "code": {
+                    "type": "string",
+                    "description": "code"
+                },
+                "message": {
+                    "type": "string",
+                    "description": "message"
+                },
+                "type": {
+                    "type": "string",
+                    "description": "type",
+                    "enum": ["Error"]
+                },
+                "stack": {
+                    "type": "string",
+                    "description": "stack"
+                }
+            }
+        },
+        "requestId": {
+            "type": "string",
+            "description": "requestId"
+        }
+    }
+}

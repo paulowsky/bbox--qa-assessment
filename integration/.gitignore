@@ -1,3 +1,5 @@
-reports/*
+reports/screenshots
+reports/*.json
+reports/*.html
 *.log
 Gemfile.lock

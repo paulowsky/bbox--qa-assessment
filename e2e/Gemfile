@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'cucumber', '3.2.0'
+gem 'cucumber', '~> 3.1.2'
 gem 'cucumber_statistics'
 gem 'brazilian_documents'
 gem 'selenium-webdriver'
@@ -15,3 +15,4 @@ gem 'bundler'
 gem 'rspec'
 gem 'faker'
 gem 'pry'
+gem 'ffi'

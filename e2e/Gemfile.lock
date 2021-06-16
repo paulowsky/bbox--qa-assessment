@@ -55,7 +55,7 @@ GEM
     digit_checksum (0.2.3)
     faker (2.18.0)
       i18n (>= 1.6, < 2)
-    ffi (1.15.1-x64-mingw32)
+    ffi (1.15.3-x64-mingw32)
     gherkin (5.1.0)
     haml (5.2.1)
       temple (>= 0.8.0)
@@ -138,4 +138,4 @@ DEPENDENCIES
   site_prism
 
 BUNDLED WITH
-   2.1.4
+   2.2.16

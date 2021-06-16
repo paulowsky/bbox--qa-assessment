@@ -17,9 +17,9 @@ O código utiliza Design Patterns e estruturações avançadas, visando manuten�
 ### Local
 1. Acesso: acessar a raiz do projeto usando um terminal
 2. Instalação de dependências: executar o comando `bundle install`
-3. Execução dos testes serial: executar o comando `cucumber`
-4. Execução dos testes paralela: executar o comando `cucumber -p parallel`
-5. Execução de um cenário específico: executar o comando `cucumber -t @tag_desejada` (apenas 1 cenário abrangido, então apenas 1 tag: @users_register)
+3. Execução dos testes serial: executar o comando `bundle exec cucumber`
+4. Execução dos testes paralela: executar o comando `bundle exec cucumber -p parallel`
+5. Execução de um cenário específico: executar o comando `bundle exec cucumber -t @tag_desejada` (apenas 1 cenário abrangido, então apenas 1 tag: @users_register)
 
 ## Cenários validados
 - Cadastro de usuário válido (apresenta erro na validação do e-mail retornado)
